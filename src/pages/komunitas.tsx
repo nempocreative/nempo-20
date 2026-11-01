@@ -4,18 +4,14 @@ import { Link } from "@/lib/wouter";
 import {
   ArrowRight,
   ArrowUpRight,
-  BookOpen,
   CalendarDays,
   Camera,
-  Dumbbell,
   GraduationCap,
   Instagram,
-  Leaf,
   Lightbulb,
   MapPin,
   Music2,
   Palette,
-  Store,
   Users,
 } from "lucide-react";
 import communityHeroImage from "@/assets/komunitas-hero.jpg";
@@ -174,7 +170,7 @@ export default function KomunitasPage() {
               </div>
               <dl className="mt-9 grid max-w-md grid-cols-3 gap-4 border-t border-[#d8def5] pt-6 sm:mt-10">
                 {[
-                  { value: "8+", label: "Ruang minat" },
+                  { value: "4", label: "Ruang minat" },
                   { value: "12+", label: "Kegiatan tiap tahun" },
                   { value: "1", label: "Rumah bersama" },
                 ].map((stat) => (
