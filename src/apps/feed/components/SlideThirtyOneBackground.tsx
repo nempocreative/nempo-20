@@ -90,14 +90,6 @@ export function SlideThirtyOneBackground({ showTalent = true }: { showTalent?: b
         loading="eager"
         decoding="async"
       />
-      {!showTalent && (
-        <div className="musicomedy-location-corners" aria-hidden="true">
-          <span className="musicomedy-location-corner musicomedy-location-corner--tl" />
-          <span className="musicomedy-location-corner musicomedy-location-corner--tr" />
-          <span className="musicomedy-location-corner musicomedy-location-corner--bl" />
-          <span className="musicomedy-location-corner musicomedy-location-corner--br" />
-        </div>
-      )}
     </section>
   );
 }
