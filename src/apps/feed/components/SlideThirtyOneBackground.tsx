@@ -27,7 +27,7 @@ export function SlideThirtyOneBackground() {
       <img
         src={logoAsset.url}
         alt="MusiComedy Night"
-        className="absolute left-1/2 top-[7%] w-[78%] -translate-x-1/2 drop-shadow-[0_6px_10px_rgba(0,0,0,0.35)]"
+        className="absolute left-1/2 top-[15%] w-[58%] -translate-x-1/2 drop-shadow-[0_6px_10px_rgba(0,0,0,0.35)]"
         loading="eager"
         decoding="async"
       />
