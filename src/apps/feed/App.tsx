@@ -111,7 +111,8 @@ type FeedSlide =
   | 28
   | 29
   | 30
-  | 31;
+  | 31
+  | 32;
 
 type ClientSlide = 1 | 2 | 3 | 4 | 5 | 6;
 
@@ -1876,8 +1877,9 @@ function FeedArtwork({
   slide: FeedSlide;
   exportRef: RefObject<HTMLElement | null>;
 }) {
-  // Slide 31 keeps slide 30's frame and branding, with its own background.
-  const slide = selectedSlide === 31 ? 30 : selectedSlide;
+  // Both MusiComedy slides share the same artwork and branding.
+  const isMusiComedySlide = selectedSlide === 31 || selectedSlide === 32;
+  const slide = isMusiComedySlide ? 30 : selectedSlide;
   return (
     <main
       ref={exportRef}
@@ -1986,7 +1988,7 @@ function FeedArtwork({
         <FeedMotif />
       )}
       {slide === 1 && <CompactFooterArt />}
-      {selectedSlide === 31 ? <SlideThirtyOneBackground /> : slide === 30 && <SlideThirtySumpahPemuda />}
+      {isMusiComedySlide ? <SlideThirtyOneBackground /> : slide === 30 && <SlideThirtySumpahPemuda />}
 
       <div
         className="relative z-10 flex h-full flex-col p-[7.5%]"
@@ -2008,7 +2010,7 @@ function FeedArtwork({
             </div>
             <div
               className={`border-l pl-3 leading-none ${
-                (slide === 30 && selectedSlide !== 31)
+                (slide === 30 && !isMusiComedySlide)
                   ? 'border-[#062f4d]/40 text-[#062f4d]'
                   : 'border-white/30 text-white'
               }`}
@@ -2026,12 +2028,12 @@ function FeedArtwork({
                   <>
                     <span
                       className={`text-[11px] font-bold ${
-                        (slide === 30 && selectedSlide !== 31) ? 'text-[#062f4d]' : 'text-[#f2d1a2]'
+                        (slide === 30 && !isMusiComedySlide) ? 'text-[#062f4d]' : 'text-[#f2d1a2]'
                       }`}
                     >
                       ×
                     </span>{" "}
-                    <span className={(slide === 30 && selectedSlide !== 31) ? 'text-[#062f4d]' : 'text-white'}>
+                    <span className={(slide === 30 && !isMusiComedySlide) ? 'text-[#062f4d]' : 'text-white'}>
                       Kala Muda
                     </span>
                   </>
@@ -2062,7 +2064,7 @@ function FeedArtwork({
               </span>
             )}
           </div>
-          {selectedSlide === 31 ? (
+          {isMusiComedySlide ? (
             <div className="-translate-y-[7px] max-[640px]:-translate-y-[8px] h-11 w-11 overflow-hidden rounded-[5px] bg-[#f6f1e7] p-0.5 shadow-[0_8px_18px_rgba(0,0,0,0.2)]">
               <img src={gscLogoAsset.url} alt="Logo Good Story Cafe" className="h-full w-full object-contain" decoding="async" />
             </div>
@@ -2122,7 +2124,7 @@ function FeedArtwork({
             </div>
           ) : slide === 1 ? (
             <span className="rounded-full border border-white/25 bg-[#062f4d]/25 px-2 py-1 text-[8px] font-black tracking-[0.12em] text-white/80">
-              0{slide} / 31
+              0{slide} / 32
             </span>
           ) : null}
         </header>
@@ -2526,7 +2528,7 @@ function FeedArtwork({
         )}
       </div>
 
-      {selectedSlide !== 31 && (
+      {!isMusiComedySlide && (
       <div
         className={`absolute z-20 flex items-center gap-2.5 ${
           slide >= 2
@@ -2631,7 +2633,7 @@ function App() {
     | 'calendar'
     | 'spreadsheet'
   >('nempo');
-  const [activeSlide, setActiveSlide] = useState<FeedSlide>(31);
+  const [activeSlide, setActiveSlide] = useState<FeedSlide>(32);
   const [activeClientSlide, setActiveClientSlide] = useState<ClientSlide>(3);
   const [isDownloading, setIsDownloading] = useState(false);
   const [preparedNempoPng, setPreparedNempoPng] = useState<{
@@ -2643,7 +2645,7 @@ function App() {
   const exportRef = useRef<HTMLElement | null>(null);
   const isNempoFeed = activeFeed === 'nempo';
   const isHighQualityNempoStorySlide =
-    isNempoFeed && activeSlide >= 20 && activeSlide <= 31;
+    isNempoFeed && activeSlide >= 20 && activeSlide <= 32;
   const isCoupon = activeFeed === 'coupon';
   const isQCard = activeFeed === 'qcard';
   const isPhotobooth = activeFeed === 'photobooth';
@@ -2777,7 +2779,7 @@ function App() {
           highQualityCanvas.height,
         );
         renderedCanvas = highQualityCanvas;
-      } else if (isNempoFeed && (activeSlide === 30 || activeSlide === 31)) {
+      } else if (isNempoFeed && (activeSlide === 30 || activeSlide === 31 || activeSlide === 32)) {
         const artworkWidth = artwork.getBoundingClientRect().width;
         const scale = (outputWidth / artworkWidth) * renderScale;
         renderedCanvas = await domToCanvas(artwork, {
@@ -2948,7 +2950,7 @@ function App() {
       ? isGgsStory
         ? [1, 2, 3]
         : [1, 2, 3, 4, 5, 6]
-      : [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];
+      : [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32];
   const selectedSlide =
     isGgsFeed ? activeClientSlide : activeSlide;
 
@@ -3131,7 +3133,7 @@ function App() {
                   ? 'Menyiapkan PNG…'
                   : isCalendar
                     ? 'Download PNG · 50×70 cm'
-                    : isNempoFeed && (activeSlide === 30 || activeSlide === 31)
+                    : isNempoFeed && (activeSlide === 30 || activeSlide === 31 || activeSlide === 32)
                       ? 'Download PNG · 3×'
                     : isPhotobooth || isGgsFeed || isHighQualityNempoStorySlide
                       ? 'Download PNG · 3×'
