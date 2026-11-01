@@ -1,4 +1,4 @@
-import frameAsset from '@/assets/nempo-feed-slide-31-frame.png.asset.json';
+import frameAsset from '@/assets/nempo-feed-slide-31-gamelan-frame.png.asset.json';
 
 export function SlideThirtyOneBackground() {
   return (
