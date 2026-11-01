@@ -36,7 +36,7 @@ export function SlideThirtyOneBackground() {
         style={{ background: 'radial-gradient(ellipse at center, rgba(40,8,0,0.65), transparent 70%)', filter: 'blur(4px)' }}
       />
       <div
-        className="absolute bottom-[13%] left-1/2 h-[54%] -translate-x-1/2"
+        className="absolute bottom-[13%] left-1/2 h-[62%] -translate-x-1/2"
         style={{ aspectRatio: '1068 / 1529' }}
       >
         <img
@@ -85,7 +85,7 @@ export function SlideThirtyOneBackground() {
       <img
         src={logoAsset.url}
         alt="MusiComedy Night"
-        className="absolute left-1/2 top-[19%] w-[44%] -translate-x-1/2 drop-shadow-[0_6px_10px_rgba(0,0,0,0.35)]"
+        className="absolute left-1/2 top-[15%] w-[44%] -translate-x-1/2 drop-shadow-[0_6px_10px_rgba(0,0,0,0.35)]"
         loading="eager"
         decoding="async"
       />
