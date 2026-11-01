@@ -6,6 +6,7 @@ type TableName = keyof Database["public"]["Tables"];
 export const BACKUP_TABLES = [
   "banners",
   "berita",
+  "community_applications",
   "digital_services",
   "event_tickets",
   "events",
