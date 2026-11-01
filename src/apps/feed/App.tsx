@@ -2108,8 +2108,6 @@ function FeedArtwork({
                         ? 'CAFE VINTAGE'
                     : (slide >= 20 && slide <= 28)
                       ? 'LEGENDA SUNDA'
-                      : selectedSlide === 31
-                        ? 'MUSICOMEDY NIGHT'
                       : slide === 30
                         ? 'SUMPAH PEMUDA'
                     : slide === 16 || slide === 17
