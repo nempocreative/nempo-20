@@ -134,6 +134,36 @@ export type Database = {
         }
         Relationships: []
       }
+      community_applications: {
+        Row: {
+          created_at: string
+          email: string
+          full_name: string
+          id: string
+          interest: string
+          reason: string | null
+          whatsapp: string
+        }
+        Insert: {
+          created_at?: string
+          email: string
+          full_name: string
+          id?: string
+          interest: string
+          reason?: string | null
+          whatsapp: string
+        }
+        Update: {
+          created_at?: string
+          email?: string
+          full_name?: string
+          id?: string
+          interest?: string
+          reason?: string | null
+          whatsapp?: string
+        }
+        Relationships: []
+      }
       digital_services: {
         Row: {
           active: boolean | null
