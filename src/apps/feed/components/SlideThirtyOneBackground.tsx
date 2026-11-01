@@ -1,5 +1,6 @@
 import frameAsset from '@/assets/nempo-feed-slide-31-gamelan-frame-transparent.png.asset.json';
 import logoAsset from '@/assets/musicomedy-night-logo.png.asset.json';
+import groupAsset from '@/assets/musicomedy-group.webp.asset.json';
 import bgImage from '@/assets/nempo-feed-slide-31-bg.jpg';
 
 export function SlideThirtyOneBackground() {
@@ -14,6 +15,13 @@ export function SlideThirtyOneBackground() {
         alt=""
         aria-hidden="true"
         className="absolute inset-0 h-full w-full object-cover"
+        loading="eager"
+        decoding="async"
+      />
+      <img
+        src={groupAsset.url}
+        alt="Para pengisi acara MusiComedy Night berbusana adat Sunda"
+        className="absolute bottom-[13%] left-1/2 h-[60%] w-auto max-w-none -translate-x-1/2 object-contain drop-shadow-[0_10px_18px_rgba(0,0,0,0.4)]"
         loading="eager"
         decoding="async"
       />
