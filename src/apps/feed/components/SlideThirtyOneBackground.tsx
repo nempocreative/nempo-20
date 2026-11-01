@@ -1,6 +1,7 @@
 import frameAsset from '@/assets/nempo-feed-slide-31-gamelan-frame-transparent.png.asset.json';
 import logoAsset from '@/assets/musicomedy-night-logo.png.asset.json';
 import groupAsset from '@/assets/musicomedy-group.webp.asset.json';
+import gscLogoAsset from '@/assets/good-story-cafe-logo.jpg.asset.json';
 import bgImage from '@/assets/nempo-feed-slide-31-bg.jpg';
 
 export function SlideThirtyOneBackground() {
@@ -88,6 +89,15 @@ export function SlideThirtyOneBackground() {
         loading="eager"
         decoding="async"
       />
+      <div className="absolute left-1/2 top-[8.5%] w-[13%] -translate-x-1/2 overflow-hidden rounded-xl shadow-[0_6px_14px_rgba(40,8,0,0.45)] ring-2 ring-[#f5c84c]">
+        <img
+          src={gscLogoAsset.url}
+          alt="Logo Good Story Cafe"
+          className="block h-auto w-full"
+          loading="eager"
+          decoding="async"
+        />
+      </div>
     </section>
   );
 }
