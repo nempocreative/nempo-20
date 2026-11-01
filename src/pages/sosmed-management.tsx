@@ -109,8 +109,10 @@ function PhoneMockup() {
 
 export default function SosmedManagementPage() {
   const [filter, setFilter] = useState<Filter>("Semua");
+  const [portfolioFilter, setPortfolioFilter] = useState<PortfolioFilter>("Semua");
   const [open, setOpen] = useState<number | null>(0);
   const items = filter === "Semua" ? SOSMED_ITEMS : SOSMED_ITEMS.filter((i) => i.platform === filter);
+  const portfolioItems = portfolioFilter === "Semua" ? SOSMED_PORTFOLIO : SOSMED_PORTFOLIO.filter((p) => p.category === portfolioFilter);
 
   return (
     <Layout>
