@@ -22,7 +22,7 @@ export function SlideThirtyOneBackground() {
       {/* Stage spotlight behind the performers */}
       <div
         aria-hidden="true"
-        className="absolute bottom-[10%] left-1/2 h-[62%] w-[80%] -translate-x-1/2"
+        className="absolute bottom-[7%] left-1/2 h-[62%] w-[80%] -translate-x-1/2"
         style={{
           background:
             'radial-gradient(ellipse 50% 55% at 50% 45%, rgba(255,214,140,0.55), rgba(255,160,70,0.18) 55%, transparent 75%)',
@@ -36,7 +36,7 @@ export function SlideThirtyOneBackground() {
         style={{ background: 'radial-gradient(ellipse at center, rgba(40,8,0,0.65), transparent 70%)', filter: 'blur(4px)' }}
       />
       <div
-        className="absolute bottom-[13%] left-1/2 h-[62%] -translate-x-1/2"
+        className="absolute bottom-[10%] left-1/2 h-[62%] -translate-x-1/2"
         style={{ aspectRatio: '1068 / 1529' }}
       >
         <img
