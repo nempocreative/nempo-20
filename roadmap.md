@@ -1,5 +1,5 @@
 # Roadmap
-- [ ] Slide 32: tampilkan suasana foto lokasi dengan gerakan halus; menunggu foto asli Good Story Cafe dari pengguna.
+- [x] Slide 32: suasana kafe ilustrasi AI dengan gerakan kamera halus; bukan foto asli Good Story Cafe.
 - [x] Tambah slide 32 memakai poster slide 31; pilihan kedua slide dan tampilan ponsel diperiksa, semua gambar tampil.
 - [ ] Rapikan Design Creative: tampilan editorial natural tanpa oranye, layanan dan harga tetap sama; periksa tampilan dan tombol.
 - [x] Perbagus contoh sosmed: 6 kategori, 12 tone, 108 desain AI; galeri, ganti tone, perbesar desain dan tampilan ponsel diperiksa.

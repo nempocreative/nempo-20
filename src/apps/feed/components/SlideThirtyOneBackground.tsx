@@ -2,6 +2,7 @@ import frameAsset from '@/assets/nempo-feed-slide-31-gamelan-frame-transparent.p
 import logoAsset from '@/assets/musicomedy-night-logo.png.asset.json';
 import groupAsset from '@/assets/musicomedy-group.webp.asset.json';
 import bgImage from '@/assets/nempo-feed-slide-31-bg.jpg';
+import cafeAtmosphere from '@/assets/musicomedy-cafe-atmosphere.jpg';
 
 export function SlideThirtyOneBackground({ showTalent = true }: { showTalent?: boolean }) {
   return (
@@ -18,6 +19,19 @@ export function SlideThirtyOneBackground({ showTalent = true }: { showTalent?: b
         loading="eager"
         decoding="async"
       />
+      {!showTalent && (
+        <div className="musicomedy-cafe-scene">
+          <img
+            src={cafeAtmosphere}
+            alt="Ilustrasi AI suasana kafe dengan meja kopi dan panggung akustik, bukan foto asli Good Story Cafe"
+            width={1536}
+            height={1024}
+            loading="eager"
+            decoding="async"
+            className="musicomedy-cafe-photo"
+          />
+        </div>
+      )}
       {showTalent && <>
       {/* Stage spotlight behind the performers */}
       <div

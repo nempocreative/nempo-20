@@ -10,6 +10,7 @@
 <!-- LOVABLE:END -->
 
 ## Architecture rules
+- MusiComedy slide variants share the frame component; the talent-free variant contains its own scoped cafe animation, respecting reduced motion; why: slide 32 atmosphere must not change slide 31's performers.
 - Social-media portfolio collections live in browser-safe data with separate original image sets per tone and a shared gallery component; why: category covers, nine-post grids, and enlarged posts stay consistent without CSS recoloring.
 - Invitation catalog covers use stored portrait captures of each actual closed invitation, mapped by stable theme code; why: thumbnails must match the real design and keep identical proportions across screen sizes. Refresh the capture when a cover design changes.
 - Bespoke invitation designs are separate components selected by stable theme code in the invitation demo; why: refining one theme must not alter the others.
