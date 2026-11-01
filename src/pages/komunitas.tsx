@@ -532,6 +532,208 @@ export default function KomunitasPage() {
           </div>
         </section>
 
+        {/* ===== OPEN RECRUITMENT FORM ===== */}
+        <section id="gabung" className="border-y border-[#d9daf3] bg-[#f5f5ff]">
+          <div className="mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:px-6 sm:py-20 lg:grid-cols-[.85fr_1.15fr] lg:gap-16 lg:px-8">
+            <div>
+              <span className="text-[11px] font-bold uppercase tracking-[0.18em] text-[#a62f78]">
+                Open recruitment
+              </span>
+              <h2 className="mt-2 max-w-md text-2xl font-black leading-tight tracking-[-0.04em] text-[#37215b] sm:text-3xl lg:text-4xl">
+                Daftar jadi bagian
+                <br />
+                <span className="text-[#a62f78]">Nempo Community.</span>
+              </h2>
+              <p className="mt-4 max-w-md text-sm leading-7 text-[#62677c]">
+                Isi formulir singkat ini dan ceritakan minatmu. Tim kami akan
+                menghubungimu lewat WhatsApp untuk langkah berikutnya.
+              </p>
+              <ul className="mt-6 space-y-3">
+                {[
+                  "Terbuka untuk pelajar, mahasiswa, dan umum",
+                  "Tanpa biaya pendaftaran",
+                  "Boleh daftar lebih dari satu minat nanti",
+                ].map((point) => (
+                  <li
+                    key={point}
+                    className="flex items-start gap-2.5 text-sm font-semibold text-[#3f3564]"
+                  >
+                    <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-[#a62f78]" />
+                    {point}
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="rounded-[2rem] border border-[#e5e2f5] bg-white p-6 shadow-[0_20px_50px_rgba(61,42,113,.10)] sm:p-8">
+              {submitted ? (
+                <div className="flex h-full min-h-[320px] flex-col items-center justify-center text-center">
+                  <div className="flex h-16 w-16 items-center justify-center rounded-full bg-[#a62f78]/10">
+                    <CheckCircle2 className="h-8 w-8 text-[#a62f78]" />
+                  </div>
+                  <h3 className="mt-5 text-xl font-black text-[#37215b]">
+                    Pendaftaranmu sudah masuk!
+                  </h3>
+                  <p className="mt-2 max-w-sm text-sm leading-6 text-[#62677c]">
+                    Terima kasih, {form.full_name.split(" ")[0]}. Kami akan
+                    segera menyapamu lewat WhatsApp. Sampai jumpa di kegiatan
+                    berikutnya!
+                  </p>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setForm(emptyForm);
+                      setSubmitted(false);
+                    }}
+                    className="mt-6 text-sm font-bold text-[#a62f78] underline-offset-4 hover:underline"
+                  >
+                    Daftarkan orang lain
+                  </button>
+                </div>
+              ) : (
+                <form onSubmit={handleSubmit} noValidate>
+                  <div className="grid gap-5 sm:grid-cols-2">
+                    <div>
+                      <label htmlFor="full_name" className={labelClass}>
+                        Nama lengkap
+                      </label>
+                      <input
+                        id="full_name"
+                        type="text"
+                        value={form.full_name}
+                        onChange={(e) => updateField("full_name", e.target.value)}
+                        placeholder="Nama kamu"
+                        className={inputClass}
+                        maxLength={100}
+                      />
+                      {errors.full_name && (
+                        <p className="mt-1.5 text-xs font-semibold text-[#c2274f]">
+                          {errors.full_name}
+                        </p>
+                      )}
+                    </div>
+                    <div>
+                      <label htmlFor="whatsapp" className={labelClass}>
+                        Nomor WhatsApp
+                      </label>
+                      <input
+                        id="whatsapp"
+                        type="tel"
+                        value={form.whatsapp}
+                        onChange={(e) => updateField("whatsapp", e.target.value)}
+                        placeholder="08xxxxxxxxxx"
+                        className={inputClass}
+                        maxLength={16}
+                      />
+                      {errors.whatsapp && (
+                        <p className="mt-1.5 text-xs font-semibold text-[#c2274f]">
+                          {errors.whatsapp}
+                        </p>
+                      )}
+                    </div>
+                    <div className="sm:col-span-2">
+                      <label htmlFor="email" className={labelClass}>
+                        Email
+                      </label>
+                      <input
+                        id="email"
+                        type="email"
+                        value={form.email}
+                        onChange={(e) => updateField("email", e.target.value)}
+                        placeholder="nama@email.com"
+                        className={inputClass}
+                        maxLength={255}
+                      />
+                      {errors.email && (
+                        <p className="mt-1.5 text-xs font-semibold text-[#c2274f]">
+                          {errors.email}
+                        </p>
+                      )}
+                    </div>
+                    <div className="sm:col-span-2">
+                      <span className={labelClass}>Minat utama</span>
+                      <div className="grid grid-cols-2 gap-2.5">
+                        {interestOptions.map((option) => {
+                          const active = form.interest === option;
+                          return (
+                            <button
+                              key={option}
+                              type="button"
+                              onClick={() => updateField("interest", option)}
+                              className={`rounded-2xl border px-3 py-3 text-left text-xs font-bold transition sm:text-sm ${
+                                active
+                                  ? "border-[#a62f78] bg-[#a62f78] text-white shadow-md shadow-[#a62f78]/20"
+                                  : "border-[#d8def5] bg-[#faf9ff] text-[#37215b] hover:border-[#a62f78]/40"
+                              }`}
+                            >
+                              {option}
+                            </button>
+                          );
+                        })}
+                      </div>
+                      {errors.interest && (
+                        <p className="mt-1.5 text-xs font-semibold text-[#c2274f]">
+                          {errors.interest}
+                        </p>
+                      )}
+                    </div>
+                    <div className="sm:col-span-2">
+                      <label htmlFor="reason" className={labelClass}>
+                        Ceritakan sedikit tentang kamu{" "}
+                        <span className="font-medium normal-case text-[#a8a6c2]">
+                          (opsional)
+                        </span>
+                      </label>
+                      <textarea
+                        id="reason"
+                        value={form.reason}
+                        onChange={(e) => updateField("reason", e.target.value)}
+                        placeholder="Apa yang ingin kamu lakukan bersama komunitas ini?"
+                        rows={4}
+                        className={`${inputClass} resize-none`}
+                        maxLength={1000}
+                      />
+                      {errors.reason && (
+                        <p className="mt-1.5 text-xs font-semibold text-[#c2274f]">
+                          {errors.reason}
+                        </p>
+                      )}
+                    </div>
+                  </div>
+
+                  {submitError && (
+                    <p className="mt-4 rounded-2xl bg-[#c2274f]/10 px-4 py-3 text-xs font-semibold text-[#c2274f]">
+                      {submitError}
+                    </p>
+                  )}
+
+                  <button
+                    type="submit"
+                    disabled={submitting}
+                    className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#a62f78] px-6 py-3.5 text-sm font-bold text-white shadow-lg shadow-[#7b2866]/25 transition hover:-translate-y-0.5 hover:bg-[#862761] disabled:translate-y-0 disabled:opacity-60"
+                  >
+                    {submitting ? (
+                      <>
+                        <Loader2 className="h-4 w-4 animate-spin" />
+                        Mengirim...
+                      </>
+                    ) : (
+                      <>
+                        Kirim pendaftaran
+                        <Send className="h-4 w-4" />
+                      </>
+                    )}
+                  </button>
+                  <p className="mt-3 text-center text-[11px] leading-5 text-[#a8a6c2]">
+                    Data kamu hanya dipakai untuk menghubungimu soal kegiatan
+                    komunitas.
+                  </p>
+                </form>
+              )}
+            </div>
+          </div>
+        </section>
+
         {/* ===== CTA ===== */}
         <section className="relative overflow-hidden bg-[#39205f] text-white">
           <div
