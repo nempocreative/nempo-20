@@ -1,5 +1,5 @@
 # Roadmap
-- [ ] Tambah slide 32 sama seperti slide 31 dan periksa pilihan slide serta poster.
+- [x] Tambah slide 32 memakai poster slide 31; pilihan kedua slide dan tampilan ponsel diperiksa, semua gambar tampil.
 - [ ] Rapikan Design Creative: tampilan editorial natural tanpa oranye, layanan dan harga tetap sama; periksa tampilan dan tombol.
 - [x] Perbagus contoh sosmed: 6 kategori, 12 tone, 108 desain AI; galeri, ganti tone, perbesar desain dan tampilan ponsel diperiksa.
 - [x] Rapikan sampul pratinjau 16 tema: memakai sampul undangan asli, proporsi tetap tanpa potongan, kartu sejajar; diperiksa pada lebar 320, 390, 768, 950, 1280, dan 1920, filter dan pembukaan undangan berhasil, 17 tes tema lolos.
