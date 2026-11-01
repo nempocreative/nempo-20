@@ -10,7 +10,7 @@ export function SlideThirtyOneBackground() {
       <img
         src={frameAsset.url}
         alt="Bingkai MusiComedy Night dengan ilustrasi alat musik tradisional, tanggal 4 November 2026, dan lokasi Good Story Cafe"
-        className="absolute inset-0 h-full w-full object-contain"
+        className="absolute inset-0 h-full w-full object-fill"
         loading="eager"
         decoding="async"
       />
