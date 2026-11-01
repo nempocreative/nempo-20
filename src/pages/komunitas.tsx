@@ -18,6 +18,7 @@ import communityHeroImage from "@/assets/komunitas-hero.jpg";
 import communityMusicImage from "@/assets/komunitas-musik.jpg";
 import communityArtImage from "@/assets/komunitas-seni.jpg";
 import communityCreatorImage from "@/assets/komunitas-kreator.jpg";
+import communityTalentImage from "@/assets/komunitas-talent.jpg";
 
 const focusAreas = [
   {
@@ -75,6 +76,7 @@ const communityTracks = [
       "Anak muda berbakat yang ingin tampil, dilatih, dan disalurkan ke panggung serta proyek Nempo.",
     accent: "#bd4d8b",
     tag: "Talent",
+    image: communityTalentImage,
   },
 ];
 
