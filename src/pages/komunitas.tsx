@@ -759,12 +759,19 @@ export default function KomunitasPage() {
                 Kami terbuka untuk bertemu dengan komunitas, kreator, dan anak
                 muda yang ingin membuat sesuatu di Jawa Barat.
               </p>
-              <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+              <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+                <a
+                  href="#gabung"
+                  className="inline-flex items-center justify-center gap-2 rounded-full bg-[#d85da4] px-6 py-3.5 text-sm font-bold text-white shadow-lg shadow-black/20 transition hover:-translate-y-0.5 hover:bg-[#c44791]"
+                >
+                  Daftar sekarang
+                  <ArrowRight className="h-4 w-4" />
+                </a>
                 <a
                   href="https://www.instagram.com/kalamudacom/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2 rounded-full bg-[#d85da4] px-6 py-3.5 text-sm font-bold text-white shadow-lg shadow-black/20 transition hover:-translate-y-0.5 hover:bg-[#c44791]"
+                  className="inline-flex items-center justify-center gap-2 rounded-full border border-white/20 px-6 py-3.5 text-sm font-bold text-white transition hover:-translate-y-0.5 hover:border-white/40 hover:bg-white/10"
                 >
                   Sapa Kala Muda
                   <Instagram className="h-4 w-4" />
