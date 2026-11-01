@@ -702,6 +702,10 @@ export function StatsRow({ destinasi, penginapan, event }: { destinasi: number; 
 }
 
 export function CategoryGrid() {
+  const serviceTrackRef = React.useRef<HTMLDivElement>(null);
+  const [servicePage, setServicePage] = React.useState(0);
+  const servicePages: (typeof mainNavItems)[number][][] = [];
+  for (let i = 0; i < mainNavItems.length; i += 8) servicePages.push(mainNavItems.slice(i, i + 8));
   return (
     <>
       <style>{`
