@@ -2061,7 +2061,11 @@ function FeedArtwork({
               </span>
             )}
           </div>
-          {slide !== 1 ? (
+          {selectedSlide === 31 ? (
+            <div className="w-[60px] overflow-hidden rounded-lg shadow-[0_6px_14px_rgba(40,8,0,0.45)] ring-2 ring-[#f5c84c] max-[640px]:w-[44px]">
+              <img src={gscLogoAsset.url} alt="Logo Good Story Cafe" className="block h-auto w-full" decoding="async" />
+            </div>
+          ) : slide !== 1 ? (
             <div className="relative">
               <span
                 className={`flex items-center whitespace-nowrap rounded-full border border-white/25 ${
