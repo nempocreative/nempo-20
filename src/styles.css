@@ -5,6 +5,45 @@
 
 @custom-variant dark (&:is(.dark *));
 
+/* Design Creative uses a local editorial palette; other services retain their themes. */
+.design-creative {
+  --background: 0 0% 100%;
+  --foreground: 160 5% 14%;
+  --card: 0 0% 100%;
+  --card-foreground: 160 5% 14%;
+  --muted: 150 5% 96%;
+  --muted-foreground: 160 3% 43%;
+  --border: 150 5% 86%;
+  --primary: 156 22% 25%;
+  --primary-foreground: 0 0% 100%;
+  --primary-border: hsl(156 22% 25%);
+  --ring: 156 22% 25%;
+  --button-outline: hsl(150 5% 80%);
+}
+.design-creative :is(h1, h2, h3, p, a, button) { letter-spacing: 0; }
+.design-creative .creative-cover { background: oklch(0.89 0.001 150); }
+.dark .design-creative {
+  --background: 160 4% 10%;
+  --foreground: 150 5% 94%;
+  --card: 160 4% 13%;
+  --card-foreground: 150 5% 94%;
+  --muted: 160 4% 16%;
+  --muted-foreground: 150 3% 68%;
+  --border: 160 4% 27%;
+  --primary: 150 20% 76%;
+  --primary-foreground: 160 10% 12%;
+  --primary-border: hsl(150 20% 76%);
+  --ring: 150 20% 76%;
+  --button-outline: hsl(160 4% 35%);
+}
+.design-creative .creative-cover-copy {
+  --foreground: 160 5% 14%;
+  --muted-foreground: 160 3% 32%;
+  --primary: 156 22% 25%;
+  --primary-foreground: 0 0% 100%;
+  --primary-border: hsl(156 22% 25%);
+}
+
 /* NEMPO 04 — scoped vintage garden palette */
 .nempo-one.nempo-five {
   --n05-paper: oklch(0.98 0.004 250);
