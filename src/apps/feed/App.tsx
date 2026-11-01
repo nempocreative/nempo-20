@@ -1,3 +1,4 @@
+import gscLogoAsset from '@/assets/good-story-cafe-logo.jpg.asset.json';
 import {
   FaFileExcel,
   FaFileWord,
