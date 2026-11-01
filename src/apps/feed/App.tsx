@@ -2063,7 +2063,7 @@ function FeedArtwork({
             )}
           </div>
           {selectedSlide === 31 ? (
-            <div className="h-11 w-11 overflow-hidden rounded-[5px] bg-[#f6f1e7] p-0.5 shadow-[0_8px_18px_rgba(0,0,0,0.2)]">
+            <div className="-translate-y-[7px] max-[640px]:-translate-y-[8px] h-11 w-11 overflow-hidden rounded-[5px] bg-[#f6f1e7] p-0.5 shadow-[0_8px_18px_rgba(0,0,0,0.2)]">
               <img src={gscLogoAsset.url} alt="Logo Good Story Cafe" className="h-full w-full object-contain" decoding="async" />
             </div>
           ) : slide !== 1 ? (
