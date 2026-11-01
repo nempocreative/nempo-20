@@ -5,11 +5,25 @@ import bgImage from '@/assets/nempo-feed-slide-31-bg.jpg';
 import cafeAtmosphere from '@/assets/musicomedy-cafe-atmosphere.jpg';
 import cafeBar from '@/assets/musicomedy-cafe-bar.jpg';
 import cafeSeating from '@/assets/musicomedy-cafe-seating.jpg';
+import cafeTerrace from '@/assets/musicomedy-cafe-terrace.jpg';
+import cafeCoffee from '@/assets/musicomedy-cafe-coffee.jpg';
+import cafeEntrance from '@/assets/musicomedy-cafe-entrance.jpg';
+import cafeStage from '@/assets/musicomedy-cafe-stage.jpg';
+import cafeReading from '@/assets/musicomedy-cafe-reading.jpg';
+import cafeFriends from '@/assets/musicomedy-cafe-friends.jpg';
+import cafeExterior from '@/assets/musicomedy-cafe-exterior.jpg';
 
 const cafeViews = [
   { image: cafeAtmosphere, label: 'Panggung akustik' },
   { image: cafeBar, label: 'Coffee bar' },
   { image: cafeSeating, label: 'Sudut santai' },
+  { image: cafeTerrace, label: 'Teras sore' },
+  { image: cafeCoffee, label: 'Kopi dan cerita' },
+  { image: cafeEntrance, label: 'Selamat datang' },
+  { image: cafeStage, label: 'Ruang bermusik' },
+  { image: cafeReading, label: 'Sudut membaca' },
+  { image: cafeFriends, label: 'Kumpul bareng' },
+  { image: cafeExterior, label: 'Suasana senja' },
 ];
 
 export function SlideThirtyOneBackground({ showTalent = true }: { showTalent?: boolean }) {

@@ -264,11 +264,18 @@
   box-shadow: var(--cafe-card-shadow);
   border-radius: 6px;
   transform-origin: 50% 85%;
-  animation: musicomedy-cafe-card-cycle 12s ease-in-out infinite;
+  animation: musicomedy-cafe-card-cycle 40s ease-in-out infinite;
 }
-.musicomedy-cafe-card--0 { animation-delay: -4s; }
-.musicomedy-cafe-card--1 { animation-delay: -8s; }
-.musicomedy-cafe-card--2 { animation-delay: 0s; }
+.musicomedy-cafe-card--0 { animation-delay: 0s; }
+.musicomedy-cafe-card--1 { animation-delay: -36s; }
+.musicomedy-cafe-card--2 { animation-delay: -32s; }
+.musicomedy-cafe-card--3 { animation-delay: -28s; }
+.musicomedy-cafe-card--4 { animation-delay: -24s; }
+.musicomedy-cafe-card--5 { animation-delay: -20s; }
+.musicomedy-cafe-card--6 { animation-delay: -16s; }
+.musicomedy-cafe-card--7 { animation-delay: -12s; }
+.musicomedy-cafe-card--8 { animation-delay: -8s; }
+.musicomedy-cafe-card--9 { animation-delay: -4s; }
 .musicomedy-cafe-card figcaption {
   color: var(--cafe-card-ink);
   text-align: center;
@@ -285,18 +292,19 @@
   border-radius: 3px;
 }
 @keyframes musicomedy-cafe-card-cycle {
-  0%, 27% { transform: translate(5%, -4%) rotate(7deg) scale(.91); z-index: 1; opacity: 1; }
-  33%, 60% { transform: translate(-4%, -2%) rotate(-6deg) scale(.96); z-index: 2; opacity: 1; }
-  66%, 92% { transform: translate(0, 0) rotate(0deg) scale(1); z-index: 3; opacity: 1; }
-  97% { transform: translate(65%, -12%) rotate(18deg) scale(1.02); z-index: 3; opacity: 0; }
-  98% { transform: translate(5%, -4%) rotate(7deg) scale(.91); z-index: 1; opacity: 0; }
-  100% { transform: translate(5%, -4%) rotate(7deg) scale(.91); z-index: 1; opacity: 1; }
+  0%, 8% { transform: translate(0, 0) rotate(0deg) scale(1); z-index: 3; opacity: 1; }
+  9.9% { transform: translate(65%, -12%) rotate(18deg) scale(1.02); z-index: 3; opacity: 0; }
+  10%, 79.9% { transform: translate(5%, -4%) rotate(7deg) scale(.91); z-index: 0; opacity: 0; }
+  80%, 88% { transform: translate(5%, -4%) rotate(7deg) scale(.91); z-index: 1; opacity: 1; }
+  90%, 98% { transform: translate(-4%, -2%) rotate(-6deg) scale(.96); z-index: 2; opacity: 1; }
+  100% { transform: translate(0, 0) rotate(0deg) scale(1); z-index: 3; opacity: 1; }
 }
 @media (prefers-reduced-motion: reduce) {
   .musicomedy-cafe-card { animation: none; }
   .musicomedy-cafe-card--0 { z-index: 3; }
   .musicomedy-cafe-card--1 { transform: rotate(-6deg) scale(.96); }
   .musicomedy-cafe-card--2 { transform: rotate(7deg) scale(.91); }
+  .musicomedy-cafe-card:nth-child(n+4) { display: none; }
 }
 
 /**
