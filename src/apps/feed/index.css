@@ -242,28 +242,61 @@
 }
 
 .musicomedy-cafe-scene {
+  --cafe-card-paper: #fff8e9;
+  --cafe-card-ink: #40281c;
+  --cafe-card-shadow: 0 20px 40px rgb(35 9 4 / 45%);
   position: absolute;
-  top: 29%;
-  bottom: 12%;
-  left: 3%;
-  right: 3%;
-  overflow: hidden;
-  mask-image: linear-gradient(to bottom, transparent, black 12%, black 85%, transparent);
-  -webkit-mask-image: linear-gradient(to bottom, transparent, black 12%, black 85%, transparent);
+  top: 31%;
+  bottom: 18%;
+  left: 17%;
+  right: 17%;
+  perspective: 1200px;
+}
+.musicomedy-cafe-card {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+  padding: 2.5%;
+  display: grid;
+  grid-template-rows: minmax(0, 1fr) auto;
+  gap: 2%;
+  background: var(--cafe-card-paper);
+  box-shadow: var(--cafe-card-shadow);
+  border-radius: 6px;
+  transform-origin: 50% 85%;
+  animation: musicomedy-cafe-card-cycle 12s ease-in-out infinite;
+}
+.musicomedy-cafe-card--0 { animation-delay: -4s; }
+.musicomedy-cafe-card--1 { animation-delay: -8s; }
+.musicomedy-cafe-card--2 { animation-delay: 0s; }
+.musicomedy-cafe-card figcaption {
+  color: var(--cafe-card-ink);
+  text-align: center;
+  font-size: 18px;
+  line-height: 1.6;
+  font-weight: 600;
+  letter-spacing: 0;
 }
 .musicomedy-cafe-photo {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: 60% center;
-  animation: musicomedy-cafe-pan 18s ease-in-out infinite alternate;
+  object-position: 55% center;
+  border-radius: 3px;
 }
-@keyframes musicomedy-cafe-pan {
-  from { transform: scale(1.04) translateX(-1%); }
-  to { transform: scale(1.13) translateX(1%); }
+@keyframes musicomedy-cafe-card-cycle {
+  0%, 27% { transform: translate(5%, -4%) rotate(7deg) scale(.91); z-index: 1; opacity: 1; }
+  33%, 60% { transform: translate(-4%, -2%) rotate(-6deg) scale(.96); z-index: 2; opacity: 1; }
+  66%, 92% { transform: translate(0, 0) rotate(0deg) scale(1); z-index: 3; opacity: 1; }
+  97% { transform: translate(65%, -12%) rotate(18deg) scale(1.02); z-index: 3; opacity: 0; }
+  98% { transform: translate(5%, -4%) rotate(7deg) scale(.91); z-index: 1; opacity: 0; }
+  100% { transform: translate(5%, -4%) rotate(7deg) scale(.91); z-index: 1; opacity: 1; }
 }
 @media (prefers-reduced-motion: reduce) {
-  .musicomedy-cafe-photo { animation: none; }
+  .musicomedy-cafe-card { animation: none; }
+  .musicomedy-cafe-card--0 { z-index: 3; }
+  .musicomedy-cafe-card--1 { transform: rotate(-6deg) scale(.96); }
+  .musicomedy-cafe-card--2 { transform: rotate(7deg) scale(.91); }
 }
 
 /**
