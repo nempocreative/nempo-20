@@ -10,6 +10,7 @@
 <!-- LOVABLE:END -->
 
 ## Architecture rules
+- Social-media portfolio collections live in browser-safe data with separate original image sets per tone and a shared gallery component; why: category covers, nine-post grids, and enlarged posts stay consistent without CSS recoloring.
 - Invitation catalog covers use stored portrait captures of each actual closed invitation, mapped by stable theme code; why: thumbnails must match the real design and keep identical proportions across screen sizes. Refresh the capture when a cover design changes.
 - Bespoke invitation designs are separate components selected by stable theme code in the invitation demo; why: refining one theme must not alter the others.
 - Bespoke invitation demos use explicit leaf routes mounting NempoShell, with palettes scoped in the global stylesheet; why: each design has its own metadata and does not leak its theme into other pages.
