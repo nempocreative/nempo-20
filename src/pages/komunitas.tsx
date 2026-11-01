@@ -4,18 +4,14 @@ import { Link } from "@/lib/wouter";
 import {
   ArrowRight,
   ArrowUpRight,
-  BookOpen,
   CalendarDays,
   Camera,
-  Dumbbell,
   GraduationCap,
   Instagram,
-  Leaf,
   Lightbulb,
   MapPin,
   Music2,
   Palette,
-  Store,
   Users,
 } from "lucide-react";
 import communityHeroImage from "@/assets/komunitas-hero.jpg";
@@ -47,70 +43,38 @@ const focusAreas = [
 const communityTracks = [
   {
     icon: Music2,
-    title: "Musik dan panggung",
+    title: "Event dan panggung",
     description:
-      "Musisi, performer, DJ, dan orang-orang di balik panggung yang ingin berkarya bersama.",
+      "Musisi, performer, MC, dan tim di balik panggung yang ingin ikut membuat acara bersama Nempo.",
     accent: "#b33a82",
-    tag: "Berkarya",
+    tag: "Event",
     image: communityMusicImage,
   },
   {
-    icon: Palette,
-    title: "Seni dan budaya",
-    description:
-      "Ruang untuk seni rupa, teater, budaya Sunda, craft, dan ekspresi lokal Jawa Barat.",
-    accent: "#6e4bb4",
-    tag: "Ekspresi",
-    image: communityArtImage,
-  },
-  {
     icon: Camera,
-    title: "Kreator dan digital",
+    title: "Konten dan sosmed",
     description:
-      "Berbagi ide dengan content creator, fotografer, videografer, dan desainer.",
+      "Content creator, fotografer, videografer, dan admin sosmed yang mau belajar bikin konten bareng.",
     accent: "#2563c7",
-    tag: "Kolaborasi",
+    tag: "Konten",
     image: communityCreatorImage,
   },
   {
-    icon: Store,
-    title: "Wirausaha muda",
+    icon: Palette,
+    title: "Desain kreatif",
     description:
-      "Saling belajar tentang bisnis, brand lokal, pemasaran, dan cara mengembangkan usaha.",
-    accent: "#bd4d8b",
-    tag: "Bertumbuh",
-  },
-  {
-    icon: Dumbbell,
-    title: "Olahraga dan lifestyle",
-    description:
-      "Temukan teman untuk bergerak, berlatih, dan membangun kebiasaan aktif bersama.",
-    accent: "#3472be",
-    tag: "Bergerak",
-  },
-  {
-    icon: Leaf,
-    title: "Lingkungan",
-    description:
-      "Ikut dalam aksi kecil yang menjaga ruang hidup, alam, dan masa depan Jawa Barat.",
-    accent: "#5670b5",
-    tag: "Berdampak",
+      "Desainer grafis, ilustrator, dan pembuat karya visual untuk kebutuhan brand dan acara.",
+    accent: "#6e4bb4",
+    tag: "Desain",
+    image: communityArtImage,
   },
   {
     icon: GraduationCap,
-    title: "Belajar dan berbagi",
+    title: "Talenta muda",
     description:
-      "Sesi sharing, kelas, dan percakapan yang membantu menemukan perspektif baru.",
-    accent: "#4855a4",
-    tag: "Insight",
-  },
-  {
-    icon: BookOpen,
-    title: "Sosial dan relawan",
-    description:
-      "Bertemu orang yang ingin hadir, membantu, dan membuat perubahan bersama.",
-    accent: "#873d96",
-    tag: "Aksi",
+      "Anak muda berbakat yang ingin tampil, dilatih, dan disalurkan ke panggung serta proyek Nempo.",
+    accent: "#bd4d8b",
+    tag: "Talent",
   },
 ];
 
@@ -206,7 +170,7 @@ export default function KomunitasPage() {
               </div>
               <dl className="mt-9 grid max-w-md grid-cols-3 gap-4 border-t border-[#d8def5] pt-6 sm:mt-10">
                 {[
-                  { value: "8+", label: "Ruang minat" },
+                  { value: "4", label: "Ruang minat" },
                   { value: "12+", label: "Kegiatan tiap tahun" },
                   { value: "1", label: "Rumah bersama" },
                 ].map((stat) => (
