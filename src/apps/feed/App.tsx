@@ -2008,7 +2008,7 @@ function FeedArtwork({
             </div>
             <div
               className={`border-l pl-3 leading-none ${
-                slide === 30
+                (slide === 30 && selectedSlide !== 31)
                   ? 'border-[#062f4d]/40 text-[#062f4d]'
                   : 'border-white/30 text-white'
               }`}
@@ -2026,12 +2026,12 @@ function FeedArtwork({
                   <>
                     <span
                       className={`text-[11px] font-bold ${
-                        slide === 30 ? 'text-[#062f4d]' : 'text-[#f2d1a2]'
+                        (slide === 30 && selectedSlide !== 31) ? 'text-[#062f4d]' : 'text-[#f2d1a2]'
                       }`}
                     >
                       ×
                     </span>{" "}
-                    <span className={slide === 30 ? 'text-[#062f4d]' : 'text-white'}>
+                    <span className={(slide === 30 && selectedSlide !== 31) ? 'text-[#062f4d]' : 'text-white'}>
                       Kala Muda
                     </span>
                   </>
@@ -2063,8 +2063,8 @@ function FeedArtwork({
             )}
           </div>
           {selectedSlide === 31 ? (
-            <div className="h-11 w-11 overflow-hidden rounded-[14px] shadow-[0_8px_18px_rgba(0,0,0,0.2)]">
-              <img src={gscLogoAsset.url} alt="Logo Good Story Cafe" className="h-full w-full object-cover" decoding="async" />
+            <div className="h-11 w-11 overflow-hidden rounded-[5px] bg-[#f6f1e7] p-0.5 shadow-[0_8px_18px_rgba(0,0,0,0.2)]">
+              <img src={gscLogoAsset.url} alt="Logo Good Story Cafe" className="h-full w-full object-contain" decoding="async" />
             </div>
           ) : slide !== 1 ? (
             <div className="relative">
