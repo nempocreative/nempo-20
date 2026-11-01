@@ -185,6 +185,36 @@ export default function SosmedManagementPage() {
             </div>
           </section>
 
+          {/* Portofolio */}
+          <section className="px-4 pt-14">
+            <SectionHead eyebrow="Portofolio" title="Contoh karya sosmed kami" note="dari beauty sampai event" />
+            <div className="mb-5 flex flex-wrap gap-2">
+              {PORTFOLIO_FILTERS.map((f) => (
+                <button
+                  key={f}
+                  type="button"
+                  onClick={() => setPortfolioFilter(f)}
+                  className={`rounded-full border-2 px-4 py-2 text-xs font-bold transition-colors ${
+                    portfolioFilter === f ? "border-sos-ink bg-sos-ink text-primary-foreground" : "border-dashed border-border bg-card text-foreground hover:border-sos-pink/50"
+                  }`}
+                >
+                  {f}
+                </button>
+              ))}
+            </div>
+            <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
+              {portfolioItems.map((p) => (
+                <figure key={p.id} className="wed-card-pop overflow-hidden rounded-3xl border-2 border-dashed border-border bg-card hover:border-sos-pink/40">
+                  <img src={p.image} alt={`Desain sosmed ${p.name}`} loading="lazy" width={1024} height={1280} className="aspect-[4/5] w-full object-cover" />
+                  <figcaption className="p-3.5">
+                    <span className="inline-block rounded-full bg-sos-blush px-2.5 py-0.5 text-[10px] font-bold text-sos-pink">{p.category}</span>
+                    <p className="mt-1.5 text-[13px] font-extrabold text-sos-ink">{p.name}</p>
+                  </figcaption>
+                </figure>
+              ))}
+            </div>
+          </section>
+
           {/* Bundles */}
           <section id="paket" className="scroll-mt-20 px-4 pt-14">
             <SectionHead eyebrow="Paket Hemat" title="Ambil paket, lebih untung" note="hemat sampai jutaan" />
