@@ -4,7 +4,7 @@ import groupAsset from '@/assets/musicomedy-group.webp.asset.json';
 import gscLogoAsset from '@/assets/good-story-cafe-logo.jpg.asset.json';
 import bgImage from '@/assets/nempo-feed-slide-31-bg.jpg';
 
-export function SlideThirtyOneBackground() {
+export function SlideThirtyOneBackground({ showTalent = true }: { showTalent?: boolean }) {
   return (
     <section
       role="group"
@@ -19,6 +19,7 @@ export function SlideThirtyOneBackground() {
         loading="eager"
         decoding="async"
       />
+      {showTalent && <>
       {/* Stage spotlight behind the performers */}
       <div
         aria-hidden="true"
@@ -75,6 +76,7 @@ export function SlideThirtyOneBackground() {
           style={{ background: 'linear-gradient(0deg, rgba(200,90,30,0.35), transparent)', filter: 'blur(3px)' }}
         />
       </div>
+      </>}
       <img
         src={frameAsset.url}
         alt="Bingkai MusiComedy Night dengan ilustrasi alat musik tradisional, tanggal 4 November 2026, dan lokasi Good Story Cafe"

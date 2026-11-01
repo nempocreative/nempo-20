@@ -1988,7 +1988,7 @@ function FeedArtwork({
         <FeedMotif />
       )}
       {slide === 1 && <CompactFooterArt />}
-      {isMusiComedySlide ? <SlideThirtyOneBackground /> : slide === 30 && <SlideThirtySumpahPemuda />}
+      {isMusiComedySlide ? <SlideThirtyOneBackground showTalent={selectedSlide !== 32} /> : slide === 30 && <SlideThirtySumpahPemuda />}
 
       <div
         className="relative z-10 flex h-full flex-col p-[7.5%]"
