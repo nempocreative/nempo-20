@@ -702,6 +702,10 @@ export function StatsRow({ destinasi, penginapan, event }: { destinasi: number; 
 }
 
 export function CategoryGrid() {
+  const serviceTrackRef = React.useRef<HTMLDivElement>(null);
+  const [servicePage, setServicePage] = React.useState(0);
+  const servicePages: (typeof mainNavItems)[number][][] = [];
+  for (let i = 0; i < mainNavItems.length; i += 8) servicePages.push(mainNavItems.slice(i, i + 8));
   return (
     <>
       <style>{`
@@ -742,8 +746,15 @@ export function CategoryGrid() {
           .nempo-service__shine { display: none; }
         }
       `}</style>
-      <div className="mx-auto grid w-full max-w-4xl grid-cols-4 gap-x-2 gap-y-5 sm:gap-x-5 sm:gap-y-7">
-        {mainNavItems.map((item, index) => {
+      <div
+        ref={serviceTrackRef}
+        onScroll={(e) => { const el = e.currentTarget; setServicePage(Math.round(el.scrollLeft / Math.max(el.clientWidth, 1))); }}
+        className="mx-auto flex w-full max-w-4xl snap-x snap-mandatory overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+      >
+        {servicePages.map((pageItems, pageIndex) => (
+        <div key={pageIndex} className="grid w-full shrink-0 snap-start grid-cols-4 content-start gap-x-2 gap-y-5 py-2 sm:gap-x-5 sm:gap-y-7">
+        {pageItems.map((item, itemIndex) => {
+          const index = pageIndex * 8 + itemIndex;
           const [firstWord, ...remainingWords] = item.label.split(" ");
           return (
             <Link
@@ -785,7 +796,22 @@ export function CategoryGrid() {
             </Link>
           );
         })}
+        </div>
+        ))}
       </div>
+      {servicePages.length > 1 && (
+        <div className="mt-3 flex justify-center gap-1.5">
+          {servicePages.map((_, i) => (
+            <button
+              key={i}
+              type="button"
+              aria-label={`Halaman layanan ${i + 1}`}
+              onClick={() => serviceTrackRef.current?.scrollTo({ left: i * serviceTrackRef.current.clientWidth, behavior: "smooth" })}
+              className={`h-1.5 rounded-full transition-all ${servicePage === i ? "w-5 bg-[#243D70]" : "w-1.5 bg-[#243D70]/25"}`}
+            />
+          ))}
+        </div>
+      )}
     </>
   );
 }
