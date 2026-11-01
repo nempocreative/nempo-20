@@ -15,7 +15,6 @@ import {
   MapPin,
   Music2,
   Palette,
-  Sparkles,
   Store,
   Users,
 } from "lucide-react";
