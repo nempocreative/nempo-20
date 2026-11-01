@@ -1,20 +1,5 @@
 {
   "version": "7",
   "dialect": "postgresql",
-  "entries": [
-    {
-      "idx": 0,
-      "version": "7",
-      "when": 1793553088963,
-      "tag": "0000_create_content_tables",
-      "breakpoints": true
-    },
-    {
-      "idx": 1,
-      "version": "7",
-      "when": 1793553703032,
-      "tag": "0001_add_community_applications",
-      "breakpoints": true
-    }
-  ]
+  "entries": []
 }
