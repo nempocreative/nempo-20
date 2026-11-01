@@ -170,8 +170,7 @@ export default function KomunitasPage() {
           />
           <div className="relative mx-auto grid max-w-7xl gap-10 px-4 pb-12 pt-10 sm:px-6 sm:pb-16 sm:pt-14 lg:grid-cols-[1fr_1.05fr] lg:items-center lg:gap-14 lg:px-8 lg:pb-20 lg:pt-20">
             <div>
-              <span className="inline-flex items-center gap-2 rounded-full border border-[#a62f78]/25 bg-white/70 px-4 py-1.5 text-[11px] font-bold uppercase tracking-[0.16em] text-[#a62f78]">
-                <Sparkles className="h-3.5 w-3.5" />
+              <span className="inline-flex items-center rounded-full border border-[#a62f78]/25 bg-white/70 px-4 py-1.5 text-[11px] font-bold uppercase tracking-[0.16em] text-[#a62f78]">
                 Komunitas oleh Kala Muda
               </span>
               <h1 className="mt-5 max-w-xl text-[clamp(2.5rem,5.4vw,4.6rem)] font-black leading-[1.02] tracking-[-0.045em] text-[#182b39]">
