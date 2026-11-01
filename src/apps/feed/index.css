@@ -237,6 +237,35 @@
   }
 }
 
+.musicomedy-location-corners {
+  --location-accent: #b79140;
+  --location-highlight: #f6df9c;
+  position: absolute;
+  inset: auto 12% 2.8%;
+  height: 9.5%;
+  pointer-events: none;
+}
+.musicomedy-location-corner {
+  position: absolute;
+  width: 7%;
+  height: 27%;
+  border-color: var(--location-accent);
+  border-style: solid;
+  border-width: 0;
+  animation: musicomedy-corner-breathe 3.6s ease-in-out infinite;
+}
+.musicomedy-location-corner--tl { top: 0; left: 0; border-top-width: 3px; border-left-width: 3px; }
+.musicomedy-location-corner--tr { top: 0; right: 0; border-top-width: 3px; border-right-width: 3px; animation-delay: -.9s; }
+.musicomedy-location-corner--bl { bottom: 0; left: 0; border-bottom-width: 3px; border-left-width: 3px; animation-delay: -2.7s; }
+.musicomedy-location-corner--br { bottom: 0; right: 0; border-bottom-width: 3px; border-right-width: 3px; animation-delay: -1.8s; }
+@keyframes musicomedy-corner-breathe {
+  0%, 100% { opacity: .65; scale: 1; border-color: var(--location-accent); }
+  50% { opacity: 1; scale: 1.12; border-color: var(--location-highlight); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .musicomedy-location-corner { animation: none; }
+}
+
 .sangkuriang-art {
   filter: drop-shadow(0 12px 18px rgba(34, 17, 24, 0.28));
 }
