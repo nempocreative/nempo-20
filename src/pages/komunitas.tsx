@@ -118,7 +118,94 @@ const marqueeWords = [
   "Seni",
 ];
 
+const interestOptions = [
+  "Event dan panggung",
+  "Konten dan sosmed",
+  "Desain kreatif",
+  "Talenta muda",
+];
+
+const applicationSchema = z.object({
+  full_name: z
+    .string()
+    .trim()
+    .min(3, "Nama minimal 3 huruf")
+    .max(100, "Nama maksimal 100 huruf"),
+  email: z
+    .string()
+    .trim()
+    .email("Alamat email belum benar")
+    .max(255, "Email terlalu panjang"),
+  whatsapp: z
+    .string()
+    .trim()
+    .regex(/^[0-9+\-\s]{9,16}$/, "Nomor WhatsApp belum benar"),
+  interest: z.string().min(1, "Pilih salah satu minat"),
+  reason: z
+    .string()
+    .trim()
+    .max(1000, "Cerita maksimal 1000 karakter")
+    .optional(),
+});
+
+type ApplicationForm = z.infer<typeof applicationSchema>;
+
+const emptyForm: ApplicationForm = {
+  full_name: "",
+  email: "",
+  whatsapp: "",
+  interest: "",
+  reason: "",
+};
+
 export default function KomunitasPage() {
+  const [form, setForm] = useState<ApplicationForm>(emptyForm);
+  const [errors, setErrors] = useState<Partial<Record<keyof ApplicationForm, string>>>({});
+  const [submitting, setSubmitting] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
+  const [submitError, setSubmitError] = useState("");
+
+  const updateField = (field: keyof ApplicationForm, value: string) => {
+    setForm((prev) => ({ ...prev, [field]: value }));
+    setErrors((prev) => ({ ...prev, [field]: undefined }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setSubmitError("");
+
+    const parsed = applicationSchema.safeParse(form);
+    if (!parsed.success) {
+      const fieldErrors: Partial<Record<keyof ApplicationForm, string>> = {};
+      for (const issue of parsed.error.issues) {
+        const field = issue.path[0] as keyof ApplicationForm;
+        if (!fieldErrors[field]) fieldErrors[field] = issue.message;
+      }
+      setErrors(fieldErrors);
+      return;
+    }
+
+    setSubmitting(true);
+    const { error } = await supabase.from("community_applications").insert({
+      full_name: parsed.data.full_name,
+      email: parsed.data.email,
+      whatsapp: parsed.data.whatsapp,
+      interest: parsed.data.interest,
+      reason: parsed.data.reason || null,
+    });
+    setSubmitting(false);
+
+    if (error) {
+      setSubmitError("Pendaftaran belum terkirim. Coba lagi sebentar lagi, ya.");
+      return;
+    }
+    setSubmitted(true);
+  };
+
+  const inputClass =
+    "w-full rounded-2xl border border-[#d8def5] bg-white px-4 py-3 text-sm text-[#37215b] outline-none transition placeholder:text-[#a8a6c2] focus:border-[#a62f78] focus:ring-2 focus:ring-[#a62f78]/15";
+  const labelClass =
+    "mb-1.5 block text-xs font-bold uppercase tracking-[0.08em] text-[#5f5578]";
   return (
     <Layout>
       <SEO
