@@ -1,7 +1,7 @@
 import { mainNavItems } from "@/data/main-nav-items";
 import collaborationHeroImage from "@/assets/076ae51bf23030e0b8cfb7975b94609a_1789408708055.jpg";
 import kalaMudaHeroImage from "@/assets/94d218d05080a6554bc7214283cb8a88_1789408730013.jpg";
-import digiNempoHeroImage from "@/assets/d8bb582f2f075b716c1d0d1dc01bb672_1789408801865.jpg";
+import digiNempoHeroImage from "@/assets/business-system-banner.jpg";
 import digitalGrowthBannerImage from "@/assets/nempo-team-banner.jpg";
 import digitalServicesHeroImage from "@/assets/generated_images/digital-services-hero.jpg";
 import designCreativeBannerImage from "@/assets/design-creative-banner.jpg";
