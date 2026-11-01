@@ -1,17 +1,23 @@
+import { useState } from "react";
+import { z } from "zod";
 import { Layout } from "@/components/layout";
 import { SEO } from "@/components/seo";
 import { Link } from "@/lib/wouter";
+import { supabase } from "@/integrations/supabase/client";
 import {
   ArrowRight,
   ArrowUpRight,
   CalendarDays,
   Camera,
+  CheckCircle2,
   GraduationCap,
   Instagram,
   Lightbulb,
+  Loader2,
   MapPin,
   Music2,
   Palette,
+  Send,
   Users,
 } from "lucide-react";
 import communityHeroImage from "@/assets/komunitas-hero.jpg";
