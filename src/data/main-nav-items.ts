@@ -5,6 +5,7 @@ import {
   Instagram,
   Lightbulb,
   Mail,
+  Users,
 } from "lucide-react";
 import {
   NavEventIcon,
@@ -20,4 +21,5 @@ export const mainNavItems = [
   { id: "design-creative", href: "/design-creative", label: "Design Creative", icon: Lightbulb, color: "#D97706", bg: "#FEF3C7" },
   { id: "talent-management", href: "/talent", label: "Talent Management", icon: NavTalentIcon, color: "#8B5CF6", bg: "#EDE9FE" },
   { id: "business-system", href: "/business-system", label: "Business System", icon: Building2, color: "#0F766E", bg: "#CCFBF1" },
+  { id: "nempo-community", href: "/komunitas", label: "Nempo Community", icon: Users, color: "#2563EB", bg: "#DBEAFE" },
 ] as const;
