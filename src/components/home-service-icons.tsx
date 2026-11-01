@@ -108,6 +108,18 @@ function ServiceArt({ id }: ServiceArtProps) {
           <path d="m49 12 1.2 3 3 1.2-3 1.3-1.2 3-1.3-3-3-1.3 3-1.2 1.3-3Z" fill={gold} stroke={outline} strokeWidth="1" />
         </>
       );
+    case "nempo-community":
+      return (
+        <>
+          <ellipse cx="32" cy="57" rx="18" ry="3" fill="#633F7C" opacity=".18" />
+          <circle cx="20" cy="24" r="6" fill="#DBEAFE" stroke={outline} strokeWidth="2" />
+          <circle cx="44" cy="24" r="6" fill="#DBEAFE" stroke={outline} strokeWidth="2" />
+          <path d="M9 48c0-8 5-13 11-13s9 3 10 6M55 48c0-8-5-13-11-13s-9 3-10 6" fill="#BFDBFE" stroke={outline} strokeWidth="2" strokeLinecap="round" />
+          <circle cx="32" cy="29" r="7.5" fill={cream} stroke={outline} strokeWidth="2.1" />
+          <path d="M19 52c0-9 6-14 13-14s13 5 13 14Z" fill="#2563EB" stroke={outline} strokeWidth="2.1" strokeLinejoin="round" />
+          <path d="m50 9 1.2 3 3 1.2-3 1.3-1.2 3-1.3-3-3-1.3 3-1.2 1.3-3Z" fill={gold} stroke={outline} strokeWidth="1" />
+        </>
+      );
     default:
       return null;
   }
