@@ -1,4 +1,5 @@
 # Roadmap
+- [x] Perbagus contoh sosmed: 6 kategori, 12 tone, 108 desain AI; galeri, ganti tone, perbesar desain dan tampilan ponsel diperiksa.
 - [x] Rapikan sampul pratinjau 16 tema: memakai sampul undangan asli, proporsi tetap tanpa potongan, kartu sejajar; diperiksa pada lebar 320, 390, 768, 950, 1280, dan 1920, filter dan pembukaan undangan berhasil, 17 tes tema lolos.
 - [x] NEMPO 16: Merah Marun Tanpa Foto dengan cartoon beranimasi, acara, cerita, RSVP, kado dan kalender pratinjau; animasi, kalender, ucapan, kartu tema dan tampilan ponsel/komputer diperiksa, 76 tes lolos.
 - [x] NEMPO 15: Merah Marun Adat Foto, acara, cerita, galeri, RSVP, kado dan kalender pratinjau; galeri, kalender, ucapan, kartu tema dan tampilan ponsel/komputer diperiksa, 75 tes lolos.
