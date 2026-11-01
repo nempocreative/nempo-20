@@ -8,6 +8,7 @@ import {
   MessageCircle, Check, ChevronDown, ArrowRight, Heart, Play,
 } from "lucide-react";
 import { SOSMED_BUNDLES, SOSMED_ITEMS, bundleSaving, rupiah, type SosmedItem } from "@/data/sosmed-packages";
+import { SOSMED_PORTFOLIO, SOSMED_PORTFOLIO_CATEGORIES, type SosmedPortfolioCategory } from "@/data/sosmed-portfolio";
 
 const hand = "font-[family-name:var(--font-wed-hand)]";
 
@@ -38,6 +39,9 @@ const marqueeItems = ["Instagram Feed", "Reels", "Story", "Highlight", "Instagra
 
 type Filter = "Semua" | SosmedItem["platform"];
 const FILTERS: Filter[] = ["Semua", "Instagram", "TikTok"];
+
+type PortfolioFilter = "Semua" | SosmedPortfolioCategory;
+const PORTFOLIO_FILTERS: PortfolioFilter[] = ["Semua", ...SOSMED_PORTFOLIO_CATEGORIES];
 
 function StickerIcon({ icon: Icon, color, className = "" }: { icon: React.ElementType; color: string; className?: string }) {
   return (
