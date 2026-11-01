@@ -1,7 +1,6 @@
 import frameAsset from '@/assets/nempo-feed-slide-31-gamelan-frame-transparent.png.asset.json';
 import logoAsset from '@/assets/musicomedy-night-logo.png.asset.json';
 import groupAsset from '@/assets/musicomedy-group.webp.asset.json';
-import gscLogoAsset from '@/assets/good-story-cafe-logo.jpg.asset.json';
 import bgImage from '@/assets/nempo-feed-slide-31-bg.jpg';
 
 export function SlideThirtyOneBackground({ showTalent = true }: { showTalent?: boolean }) {
