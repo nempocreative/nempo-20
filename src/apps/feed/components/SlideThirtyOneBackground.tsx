@@ -21,7 +21,7 @@ export function SlideThirtyOneBackground() {
       <img
         src={groupAsset.url}
         alt="Para pengisi acara MusiComedy Night berbusana adat Sunda"
-        className="absolute bottom-[13%] left-1/2 h-[60%] w-auto max-w-none -translate-x-1/2 object-contain drop-shadow-[0_10px_18px_rgba(0,0,0,0.4)]"
+        className="absolute bottom-[13%] left-1/2 h-[54%] w-auto max-w-none -translate-x-1/2 object-contain drop-shadow-[0_10px_18px_rgba(0,0,0,0.4)]"
         loading="eager"
         decoding="async"
       />
@@ -35,7 +35,7 @@ export function SlideThirtyOneBackground() {
       <img
         src={logoAsset.url}
         alt="MusiComedy Night"
-        className="absolute left-1/2 top-[15%] w-[58%] -translate-x-1/2 drop-shadow-[0_6px_10px_rgba(0,0,0,0.35)]"
+        className="absolute left-1/2 top-[19%] w-[44%] -translate-x-1/2 drop-shadow-[0_6px_10px_rgba(0,0,0,0.35)]"
         loading="eager"
         decoding="async"
       />
