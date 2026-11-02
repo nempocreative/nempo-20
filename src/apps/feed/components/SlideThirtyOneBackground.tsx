@@ -37,11 +37,12 @@ export function SlideThirtyOneBackground({ showTalent = true }: { showTalent?: b
           {cafeViews.map((view, index) => (
             <figure className={`musicomedy-cafe-card musicomedy-cafe-card--${index}`} key={view.label}>
               <img
-                src={view.image}
-                alt={`Ilustrasi AI ${view.label.toLowerCase()}, bukan foto asli Good Story Cafe`}
-                width={1536}
-                height={1024}
+                src={view.image.url}
+                alt={`Foto suasana asli Good Story Cafe: ${view.label.toLowerCase()}`}
+                width={1920}
+                height={1280}
                 loading="eager"
+
                 decoding="async"
                 className="musicomedy-cafe-photo"
               />
