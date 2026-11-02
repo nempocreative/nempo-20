@@ -7,13 +7,25 @@ import cafeWomen from '@/assets/good-story-cafe-SJL01945.jpg.asset.json';
 import cafeNight from '@/assets/good-story-cafe-SJL01959.jpg.asset.json';
 import cafeBooth from '@/assets/good-story-cafe-SJL01970_2.jpg.asset.json';
 import cafeCups from '@/assets/good-story-cafe-SJL01965.jpg.asset.json';
+import cafeMeal from '@/assets/good-story-cafe-SJL01970.jpg.asset.json';
+import cafePoses from '@/assets/good-story-cafe-SJL01974.jpg.asset.json';
+import cafeTrio from '@/assets/good-story-cafe-SJL01980.jpg.asset.json';
+import cafePatio from '@/assets/good-story-cafe-SJL01898.jpg.asset.json';
+import cafeTerrace from '@/assets/good-story-cafe-SJL01896.jpg.asset.json';
 
-const cafeViews = [
+type CafeView = { image: { url: string }; label: string; focus?: string };
+
+const cafeViews: CafeView[] = [
   { image: cafeToast, label: 'Bersulang kopi' },
   { image: cafeWomen, label: 'Santai sore' },
   { image: cafeNight, label: 'Suasana malam' },
   { image: cafeBooth, label: 'Kumpul bareng' },
   { image: cafeCups, label: 'Cerita di meja' },
+  { image: cafeMeal, label: 'Makan bareng' },
+  { image: cafePoses, label: 'Gaya di kafe' },
+  { image: cafeTrio, label: 'Tawa tiga kawan' },
+  { image: cafePatio, label: 'Teras kafe' },
+  { image: cafeTerrace, label: 'Pojok kafe', focus: '50% 85%' },
 ];
 
 
@@ -42,9 +54,9 @@ export function SlideThirtyOneBackground({ showTalent = true }: { showTalent?: b
                 width={1920}
                 height={1280}
                 loading="eager"
-
                 decoding="async"
                 className="musicomedy-cafe-photo"
+                style={view.focus ? { objectPosition: view.focus } : undefined}
               />
               <figcaption>{view.label}</figcaption>
             </figure>
