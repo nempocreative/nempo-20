@@ -12,6 +12,11 @@ import cafePoses from '@/assets/good-story-cafe-SJL01974.jpg.asset.json';
 import cafeTrio from '@/assets/good-story-cafe-SJL01980.jpg.asset.json';
 import cafePatio from '@/assets/good-story-cafe-SJL01898.jpg.asset.json';
 import cafeTerrace from '@/assets/good-story-cafe-SJL01896.jpg.asset.json';
+import cafeChairs from '@/assets/good-story-cafe-SJL01893.jpg.asset.json';
+import cafeLounge from '@/assets/good-story-cafe-SJL01887.jpg.asset.json';
+import cafeGlass from '@/assets/good-story-cafe-SJL01886.jpg.asset.json';
+import cafeBooths from '@/assets/good-story-cafe-SJL01883.jpg.asset.json';
+import cafeRattan from '@/assets/good-story-cafe-SJL01871.jpg.asset.json';
 
 type CafeView = { image: { url: string }; label: string; focus?: string };
 
@@ -26,6 +31,11 @@ const cafeViews: CafeView[] = [
   { image: cafeTrio, label: 'Tawa tiga kawan' },
   { image: cafePatio, label: 'Teras kafe' },
   { image: cafeTerrace, label: 'Pojok kafe', focus: '50% 85%' },
+  { image: cafeChairs, label: 'Kursi kosong', focus: '50% 60%' },
+  { image: cafeLounge, label: 'Bilik santai' },
+  { image: cafeGlass, label: 'Sudut kaca', focus: '50% 60%' },
+  { image: cafeBooths, label: 'Bilik keluarga' },
+  { image: cafeRattan, label: 'Meja rotan' },
 ];
 
 

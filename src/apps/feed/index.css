@@ -264,18 +264,23 @@
   box-shadow: var(--cafe-card-shadow);
   border-radius: 6px;
   transform-origin: 50% 85%;
-  animation: musicomedy-cafe-card-cycle 20s ease-in-out infinite;
+  animation: musicomedy-cafe-card-cycle 30s ease-in-out infinite;
 }
 .musicomedy-cafe-card--0 { animation-delay: 0s; }
-.musicomedy-cafe-card--1 { animation-delay: -18s; }
-.musicomedy-cafe-card--2 { animation-delay: -16s; }
-.musicomedy-cafe-card--3 { animation-delay: -14s; }
-.musicomedy-cafe-card--4 { animation-delay: -12s; }
-.musicomedy-cafe-card--5 { animation-delay: -10s; }
-.musicomedy-cafe-card--6 { animation-delay: -8s; }
-.musicomedy-cafe-card--7 { animation-delay: -6s; }
-.musicomedy-cafe-card--8 { animation-delay: -4s; }
-.musicomedy-cafe-card--9 { animation-delay: -2s; }
+.musicomedy-cafe-card--1 { animation-delay: -28s; }
+.musicomedy-cafe-card--2 { animation-delay: -26s; }
+.musicomedy-cafe-card--3 { animation-delay: -24s; }
+.musicomedy-cafe-card--4 { animation-delay: -22s; }
+.musicomedy-cafe-card--5 { animation-delay: -20s; }
+.musicomedy-cafe-card--6 { animation-delay: -18s; }
+.musicomedy-cafe-card--7 { animation-delay: -16s; }
+.musicomedy-cafe-card--8 { animation-delay: -14s; }
+.musicomedy-cafe-card--9 { animation-delay: -12s; }
+.musicomedy-cafe-card--10 { animation-delay: -10s; }
+.musicomedy-cafe-card--11 { animation-delay: -8s; }
+.musicomedy-cafe-card--12 { animation-delay: -6s; }
+.musicomedy-cafe-card--13 { animation-delay: -4s; }
+.musicomedy-cafe-card--14 { animation-delay: -2s; }
 
 .musicomedy-cafe-card figcaption {
   color: var(--cafe-card-ink);

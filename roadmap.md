@@ -1,5 +1,6 @@
 # Roadmap
-- [x] Slide 32: 10 foto asli Good Story Cafe (SJL01896/98, 01945/55/59/65/70, 01970_2, 01974/80) dalam tumpukan kartu berganti otomatis; foto AI lama dihapus.
+- [x] Slide 32: 15 foto asli Good Story Cafe (SJL01871/83/86/87/93/96/98, 01945/55/59/65/70, 01970_2, 01974/80) dalam tumpukan kartu, 2 detik per foto; foto AI lama dihapus.
+
 
 
 - [x] Tambah slide 32 memakai poster slide 31; pilihan kedua slide dan tampilan ponsel diperiksa, semua gambar tampil.
