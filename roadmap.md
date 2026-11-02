@@ -1,5 +1,6 @@
 # Roadmap
-- [x] Slide 32: 5 foto asli Good Story Cafe (SJL01945/55/59/65/70_2) dalam tumpukan kartu berganti otomatis; foto AI lama dihapus.
+- [x] Slide 32: 10 foto asli Good Story Cafe (SJL01896/98, 01945/55/59/65/70, 01970_2, 01974/80) dalam tumpukan kartu berganti otomatis; foto AI lama dihapus.
+
 
 - [x] Tambah slide 32 memakai poster slide 31; pilihan kedua slide dan tampilan ponsel diperiksa, semua gambar tampil.
 - [ ] Rapikan Design Creative: tampilan editorial natural tanpa oranye, layanan dan harga tetap sama; periksa tampilan dan tombol.
