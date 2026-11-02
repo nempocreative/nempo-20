@@ -1,5 +1,6 @@
 # Roadmap
-- [x] Slide 32: 10 foto sudut kafe AI dalam tumpukan kartu berganti otomatis; bukan foto asli Good Story Cafe.
+- [x] Slide 32: 5 foto asli Good Story Cafe (SJL01945/55/59/65/70_2) dalam tumpukan kartu berganti otomatis; foto AI lama dihapus.
+
 - [x] Tambah slide 32 memakai poster slide 31; pilihan kedua slide dan tampilan ponsel diperiksa, semua gambar tampil.
 - [ ] Rapikan Design Creative: tampilan editorial natural tanpa oranye, layanan dan harga tetap sama; periksa tampilan dan tombol.
 - [x] Perbagus contoh sosmed: 6 kategori, 12 tone, 108 desain AI; galeri, ganti tone, perbesar desain dan tampilan ponsel diperiksa.
