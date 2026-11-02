@@ -21,20 +21,20 @@ import cafeRattan from '@/assets/good-story-cafe-SJL01871.jpg.asset.json';
 type CafeView = { image: { url: string }; label: string; alt: string; focus?: string };
 
 const cafeViews: CafeView[] = [
-  { image: cafeToast, label: 'Ayo, bersulang!', alt: 'empat kawan bersulang dengan gelas kertas' },
-  { image: cafeWomen, label: 'Kumpul, yuk!', alt: 'dua kawan santai sambil makan' },
-  { image: cafeNight, label: 'Ajak kawanmu', alt: 'dua kawan berpose di kafe' },
+  { image: cafeToast, label: 'Ayo joged bareng!', alt: 'empat kawan bersulang dengan gelas kertas' },
+  { image: cafeWomen, label: 'Seru-seruan bareng', alt: 'dua kawan santai sambil makan' },
+  { image: cafeNight, label: 'Ajak semua kawanmu', alt: 'dua kawan berpose di kafe' },
   { image: cafeBooth, label: 'Amankan kursimu', alt: 'empat kawan makan di bilik' },
-  { image: cafeCups, label: 'Seruput bareng', alt: 'tiga kawan bersulang' },
-  { image: cafeMeal, label: 'Yuk, makan dulu', alt: 'empat kawan tertawa di meja' },
+  { image: cafeCups, label: 'Nyanyi bareng, yuk!', alt: 'tiga kawan bersulang' },
+  { image: cafeMeal, label: 'Ketawa bareng malam itu', alt: 'empat kawan tertawa di meja' },
   { image: cafePoses, label: 'Gas, datang ya!', alt: 'dua kawan berpose di meja' },
-  { image: cafeTrio, label: 'Cerita makin seru', alt: 'tiga kawan mengobrol' },
-  { image: cafePatio, label: 'Sudut favorit menunggu', alt: 'teras kafe dengan tanaman hias' },
+  { image: cafeTrio, label: 'Ngakak bareng, yuk!', alt: 'tiga kawan mengobrol' },
+  { image: cafePatio, label: 'Malam itu milik kita', alt: 'teras kafe dengan tanaman hias' },
   { image: cafeTerrace, label: 'Meja ini untukmu', alt: 'meja bulat di teras kafe', focus: '50% 85%' },
   { image: cafeChairs, label: 'Kursimu masih kosong', alt: 'deretan kursi kayu kosong', focus: '50% 60%' },
-  { image: cafeLounge, label: 'Santai di sini, yuk', alt: 'bilik duduk dengan lampu rotan' },
-  { image: cafeGlass, label: 'Duduk lama-lama', alt: 'bangku di sisi dinding kaca', focus: '50% 60%' },
-  { image: cafeBooths, label: 'Pilih bilikmu', alt: 'barisan bilik duduk' },
+  { image: cafeLounge, label: 'Nonton bareng, yuk', alt: 'bilik duduk dengan lampu rotan' },
+  { image: cafeGlass, label: 'Duduk depan panggung', alt: 'bangku di sisi dinding kaca', focus: '50% 60%' },
+  { image: cafeBooths, label: 'Ajak keluarga datang', alt: 'barisan bilik duduk' },
   { image: cafeRattan, label: 'Sampai jumpa 4 November!', alt: 'kursi rotan mengelilingi meja' },
 ];
 
