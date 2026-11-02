@@ -18,24 +18,24 @@ import cafeGlass from '@/assets/good-story-cafe-SJL01886.jpg.asset.json';
 import cafeBooths from '@/assets/good-story-cafe-SJL01883.jpg.asset.json';
 import cafeRattan from '@/assets/good-story-cafe-SJL01871.jpg.asset.json';
 
-type CafeView = { image: { url: string }; label: string; focus?: string };
+type CafeView = { image: { url: string }; label: string; alt: string; focus?: string };
 
 const cafeViews: CafeView[] = [
-  { image: cafeToast, label: 'Bersulang kopi' },
-  { image: cafeWomen, label: 'Santai sore' },
-  { image: cafeNight, label: 'Suasana malam' },
-  { image: cafeBooth, label: 'Kumpul bareng' },
-  { image: cafeCups, label: 'Cerita di meja' },
-  { image: cafeMeal, label: 'Makan bareng' },
-  { image: cafePoses, label: 'Gaya di kafe' },
-  { image: cafeTrio, label: 'Tawa tiga kawan' },
-  { image: cafePatio, label: 'Teras kafe' },
-  { image: cafeTerrace, label: 'Pojok kafe', focus: '50% 85%' },
-  { image: cafeChairs, label: 'Kursi kosong', focus: '50% 60%' },
-  { image: cafeLounge, label: 'Bilik santai' },
-  { image: cafeGlass, label: 'Sudut kaca', focus: '50% 60%' },
-  { image: cafeBooths, label: 'Bilik keluarga' },
-  { image: cafeRattan, label: 'Meja rotan' },
+  { image: cafeToast, label: 'Ayo, bersulang!', alt: 'empat kawan bersulang dengan gelas kertas' },
+  { image: cafeWomen, label: 'Kumpul, yuk!', alt: 'dua kawan santai sambil makan' },
+  { image: cafeNight, label: 'Ajak kawanmu', alt: 'dua kawan berpose di kafe' },
+  { image: cafeBooth, label: 'Amankan kursimu', alt: 'empat kawan makan di bilik' },
+  { image: cafeCups, label: 'Seruput bareng', alt: 'tiga kawan bersulang' },
+  { image: cafeMeal, label: 'Yuk, makan dulu', alt: 'empat kawan tertawa di meja' },
+  { image: cafePoses, label: 'Gas, datang ya!', alt: 'dua kawan berpose di meja' },
+  { image: cafeTrio, label: 'Cerita makin seru', alt: 'tiga kawan mengobrol' },
+  { image: cafePatio, label: 'Sudut favorit menunggu', alt: 'teras kafe dengan tanaman hias' },
+  { image: cafeTerrace, label: 'Meja ini untukmu', alt: 'meja bulat di teras kafe', focus: '50% 85%' },
+  { image: cafeChairs, label: 'Kursimu masih kosong', alt: 'deretan kursi kayu kosong', focus: '50% 60%' },
+  { image: cafeLounge, label: 'Santai di sini, yuk', alt: 'bilik duduk dengan lampu rotan' },
+  { image: cafeGlass, label: 'Duduk lama-lama', alt: 'bangku di sisi dinding kaca', focus: '50% 60%' },
+  { image: cafeBooths, label: 'Pilih bilikmu', alt: 'barisan bilik duduk' },
+  { image: cafeRattan, label: 'Sampai jumpa 4 November!', alt: 'kursi rotan mengelilingi meja' },
 ];
 
 
@@ -60,7 +60,7 @@ export function SlideThirtyOneBackground({ showTalent = true }: { showTalent?: b
             <figure className={`musicomedy-cafe-card musicomedy-cafe-card--${index}`} key={view.label}>
               <img
                 src={view.image.url}
-                alt={`Foto suasana asli Good Story Cafe: ${view.label.toLowerCase()}`}
+                alt={`Foto suasana asli Good Story Cafe: ${view.alt}`}
                 width={1920}
                 height={1280}
                 loading="eager"
