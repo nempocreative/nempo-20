@@ -60,7 +60,7 @@ export function SlideThirtyOneBackground({ showTalent = true }: { showTalent?: b
             <figure className={`musicomedy-cafe-card musicomedy-cafe-card--${index}`} key={view.label}>
               <img
                 src={view.image.url}
-                alt={`Foto suasana asli Good Story Cafe: ${view.label.toLowerCase()}`}
+                alt={`Foto suasana asli Good Story Cafe: ${view.alt}`}
                 width={1920}
                 height={1280}
                 loading="eager"
